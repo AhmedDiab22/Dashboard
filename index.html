@@ -7,92 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Le styles -->
-
-
-
+    <!-- Css styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/loader-style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-
     <link rel="stylesheet" type="text/css" href="assets/js/progress-bar/number-pb.css">
-
-
-
-    <style type="text/css">
-        canvas#canvas4 {
-            position: relative;
-            top: 20px;
-        }
-    </style>
-
-
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    <!-- Fav and touch icons -->
+    
+    <!-- touch icons -->
     <link rel="shortcut icon" href="assets/ico/minus.png">
 </head>
 
 <body>
-
-       
-
-               <div class="chatTalck">
-                    <div class="headerr">
-                        <div class="pull-right">
-                            <p><a href="#">Dave Junior </a></p>
-                        </div>
-                        <div class="pull-left option">
-                                <i class="fa fa-cog" aria-hidden="true" title="setting"></i>
-                                <i class="fa fa-times closee" aria-hidden="true" title="close"></i>
-                        </div>
-                    </div>
-                    <div class="body">
-                            <div class="pull-right mright">
-                                <span>Hi Im Ahmed Diab</span>
-                            </div>
-                            <div class="pull-left mleft">
-                                <span>Hello Ahmed</span>
-                                </div>
-                    </div>
-                    <input type="text" placeholder="Type Message...">
-               </div>
-
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">&nbsp;</div>
-    </div>
+    </div> <!--./Preloader-->
     <!-- TOP NAVBAR -->
     <nav role="navigation" class="navbar navbar-static-top">
         <div class="container-fluid">
-
-           
-            <!-- Brand and toggle get grouped for better mobile display -->
+          <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle"
                     type="button">
                     <span class="entypo-menu"></span>
                 </button>
-
-
+                <!-- Logo Mobile -->
                 <div id="logo-mobile" class="visible-xs">
                     <h1>
                         <span>v1.2</span>
                     </h1>
-                </div>
-
-            </div>
-
+                </div> <!--./Logo Mobile-->
+            </div><!--./navbar-header-->
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-
-                <ul style="margin-right:0;" class="nav navbar-nav navbar-left">
-                    <li>
+                <ul style="margin-right:0;margin-left: 20px !important;" class="nav navbar-nav navbar-left">
+                    <li class="dev">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <img alt="" class="admin-pic img-circle"
                                 src="http://api.randomuser.me/portraits/thumb/men/10.jpg">Hi, Dave Mattew <b
@@ -101,26 +51,26 @@
                         <ul style="margin-top:14px;" role="menu" class="edit dropdown-setting dropdown-menu">
                             <li>
                                 <a href="#">
-                                    <span class="entypo-user"></span>&#160;&#160;My Profile</a>
+                                    <span class="entypo-user"></span>&#160;&#160;&#160;الحساب الشخصي </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="entypo-vcard"></span>&#160;&#160;Account Setting</a>
+                                     <span class="entypo-vcard"></span>&#160;&#160; اعدادات الحساب </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="entypo-lifebuoy"></span>&#160;&#160;Help</a>
+                                   <span class="entypo-lifebuoy"></span>&#160;&#160;  المساعده</a>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
-                                    <span class="entypo-logout"></span>&#160;&#160;Logout</a>
+                                    <span class="entypo-logout"></span> &#160;&#160; تسجيل الخروج</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="icon-gear"></span>&#160;&#160;Setting</a>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" style="margin-left: 225px;">
+                            <span class="icon-gear"></span>&#160;&#160;الاعدادات</a>
                         <ul role="menu" class="dropdown-setting  favv dropdown-menu">
 
                             <li class="theme-bg">
@@ -139,9 +89,7 @@
                             </li>
                         </ul>
                     </li>
-                </ul>
-
-
+                </ul><!--./navbar-nav-->
 
                 <div id="nt-title-container" class="navbar-left running-text visible-lg">
                     <ul class="date-top">
@@ -151,11 +99,7 @@
 
                     <ul id="digital-clock" class="digital">
                         <li class="entypo-clock" style="margin-right:5px"></li>
-                        <li class="hour"></li>
-                        <li>:</li>
-                        <li class="min"></li>
-                        <li>:</li>
-                        <li class="sec"></li>
+                        <li id="clock"></li>
                         <li class="meridiem"></li>
                     </ul>
                 </div>
@@ -168,55 +112,51 @@
                             <div class="noft-red">23</div>
                         </a>
 
-
                         <ul style="margin: 12px 0px 0px; position: absolute; left: 0px; top: 53px;" role="menu"
                             class="dropdown-menu dropdown-wrap">
                             <li>
                                 <a href="#">
                                     <img alt="" class="img-msg img-circle"
-                                        src="http://api.randomuser.me/portraits/thumb/men/1.jpg">Jhon Doe <b>Just
-                                        Now</b>
+                                        src="http://api.randomuser.me/portraits/thumb/men/1.jpg">Jhon Doe <b>
+                                        الان</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
                                     <img alt="" class="img-msg img-circle"
-                                        src="http://api.randomuser.me/portraits/thumb/women/1.jpg">Jeniffer <b>3 Min
-                                        Ago</b>
+                                        src="http://api.randomuser.me/portraits/thumb/women/1.jpg">Jeniffer <b>3 دقائق</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
                                     <img alt="" class="img-msg img-circle"
-                                        src="http://api.randomuser.me/portraits/thumb/men/2.jpg">Dave <b>2 Hours Ago</b>
+                                        src="http://api.randomuser.me/portraits/thumb/men/2.jpg">Dave
+                                         <b>ساعتان</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
                                     <img alt="" class="img-msg img-circle"
-                                        src="http://api.randomuser.me/portraits/thumb/men/3.jpg"><i>Keanu</i> <b>1 Day
-                                        Ago</b>
+                                        src="http://api.randomuser.me/portraits/thumb/men/3.jpg"><i>Keanu</i>  <b>يومان</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
                                     <img alt="" class="img-msg img-circle"
-                                        src="http://api.randomuser.me/portraits/thumb/men/4.jpg"><i>Masashi</i> <b>2
-                                        Mounth Ago</b>
+                                        src="http://api.randomuser.me/portraits/thumb/men/4.jpg"><i>Masashi</i> <b>شهرين</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <div>See All Messege</div>
+                                <div>كل الرسائل</div>
                             </li>
                         </ul>
                     </li>
                     <li>
-
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:19px;"
                                 class="icon-warning tooltitle"></i>
                             <div class="noft-green">5</div>
@@ -224,15 +164,13 @@
                         <ul style="margin: 12px 0 0 0;" role="menu" class="dropdown-menu dropdown-wrap">
                             <li>
                                 <a href="#">
-                                    <span style="background:#DF2135" class="noft-icon maki-bus"></span><i>From
-                                        Station</i> <b>01B</b>
+                                    <span style="background:#DF2135" class="noft-icon maki-bus"></span><i>From Station</i> <b>01B</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
-                                    <span style="background:#AB6DB0" class="noft-icon maki-ferry"></span><i>Departing
-                                        at</i> <b>9:00 AM</b>
+                                    <span style="background:#AB6DB0" class="noft-icon maki-ferry"></span><i>Departingat</i> <b>9:00 AM</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
@@ -245,15 +183,13 @@
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
-                                    <span style="background:#86C440" class="noft-icon maki-airport"></span><i>Take
-                                        of</i> <b>08:30 AM</b>
+                                    <span style="background:#86C440" class="noft-icon maki-airport"></span><i>Take of</i> <b>08:30 AM</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <a href="#">
-                                    <span style="background:#0DB8DF" class="noft-icon maki-bicycle"></span><i>Take
-                                        of</i> <b>08:30 AM</b>
+                                    <span style="background:#0DB8DF" class="noft-icon maki-bicycle"></span><i>Take of</i> <b>08:30 AM</b>
                                 </a>
                             </li>
                             <li class="divider"></li>
@@ -263,28 +199,21 @@
                         </ul>
                     </li>
                     <li><a href="#"><i data-toggle="tooltip" data-placement="bottom" title="Help"
-                                style="font-size:20px;" class="icon-help tooltitle"></i></a>
+                             style="font-size:20px;" class="icon-help tooltitle"></i></a>
                     </li>
-
                 </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- /END OF TOP NAVBAR -->
+            </div><!-- /.navbar-collapse -->
+        </div><!--/.container-fluid -->
+    </nav> <!--./Top navbar-->
 
     <!-- SIDE MENU -->
-
     <div style="margin-top:0;" class="right-wrapper">
         <div class="row">
             <h3>
-                <span><i class="entypo-chat"></i>&nbsp;&nbsp;CHAT</span>
+                <span><i class="entypo-chat"></i>&nbsp;&nbsp;الدردشه</span>
             </h3>
             <div class="col-sm-12">
-                <span class="label label-success label-chat">Online</span>
+                <span class="label label-success label-chat">نشط الان</span>
                 <ul class="chat">
                     <li>
                         <a href="#">
@@ -292,7 +221,7 @@
                                 <img alt="" class="img-chat img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/men/20.jpg">
                             </span><b>Dave Junior</b>
-                            <br><i>Last seen : 08:00 PM</i>
+                            <br><i>اخر ظهور : 10:0 ص</i>
                         </a>
                     </li>
                     <li>
@@ -301,7 +230,7 @@
                                 <img alt="" class="img-chat img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/men/21.jpg">
                             </span><b>Kenneth Lucas</b>
-                            <br><i>Last seen : 07:21 PM</i>
+                            <br><i>اخر ظهور : 09:00 م</i>
                         </a>
                     </li>
                     <li>
@@ -310,14 +239,11 @@
                                 <img alt="" class="img-chat img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/men/22.jpg">
                             </span><b>Heidi Perez</b>
-                            <br><i>Last seen : 05:43 PM</i>
+                            <br><i>اخر ظهور : 12:00 ص</i>
                         </a>
                     </li>
-
-
-                </ul>
-
-                <span class="label label-chat">Offline</span>
+                </ul><!--./chat-->
+                <span class="label label-chat">غير نشط</span>
                 <ul class="chat">
                     <li>
                         <a href="#">
@@ -325,7 +251,7 @@
                                 <img alt="" class="img-chat img-offline img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/men/23.jpg">
                             </span><b>Dave Junior</b>
-                            <br><i>Last seen : 08:00 PM</i>
+                            <br><i>اخر ظهور : 06:00 م</i>
                         </a>
                     </li>
                     <li>
@@ -334,7 +260,7 @@
                                 <img alt="" class="img-chat img-offline img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/women/24.jpg">
                             </span><b>Kenneth Lucas</b>
-                            <br><i>Last seen : 07:21 PM</i>
+                            <br><i>اخر ظهور : 07:10 م</i>
                         </a>
                     </li>
                     <li>
@@ -343,7 +269,7 @@
                                 <img alt="" class="img-chat img-offline img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/men/25.jpg">
                             </span><b>Heidi Perez</b>
-                            <br><i>Last seen : 05:43 PM</i>
+                            <br><i>اخر ظهور : 05:45 ص</i>
                         </a>
                     </li>
                     <li>
@@ -352,7 +278,7 @@
                                 <img alt="" class="img-chat img-offline img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/women/25.jpg">
                             </span><b>Kenneth Lucas</b>
-                            <br><i>Last seen : 07:21 PM</i>
+                            <br><i>اخر ظهور : 01:00 م</i>
                         </a>
                     </li>
                     <li>
@@ -361,23 +287,19 @@
                                 <img alt="" class="img-chat img-offline img-circle"
                                     src="http://api.randomuser.me/portraits/thumb/men/26.jpg">
                             </span><b>Heidi Perez</b>
-                            <br><i>Last seen : 05:43 PM</i>
+                            <br><i>اخر ظهور : 03:30 م</i>
                         </a>
                     </li>
+                </ul><!--/chat-->
+            </div><!--/col-sm-12-->
+        </div><!--/row-->
+    </div><!--./right-wrapper-->
 
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
+    <!-- Skin-select -->
     <div id="skin-select">
         <div id="logo" class="logoo">
-            <h1>Apricot
-                <span>v1.2</span>
-            </h1>
-        </div>
-
+            <h1>اللوجو الرئيسي</h1>
+        </div><!--./logo-->
         <a id="toggle" class="togglee">
             <span class="entypo-menu"></span>
         </a>
@@ -388,17 +310,13 @@
                         placeholder="Search Menu..." autofocus />
                 </span>
             </form>
-        </div>
-
+        </div><!--./dark-->
         <div class="search-hover">
             <form id="demo-2">
                 <input type="search" placeholder="Search Menu..." class="id_search">
             </form>
-        </div>
-
-
-
-
+        </div><!--.search-hover-->
+        <!-- skin-part -->
         <div class="skin-part">
             <div id="tree-wrap">
                 <div class="side-bar">
@@ -406,17 +324,12 @@
                         <li>
                             <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
                                 <span class="widget-menu"></span>
-                                <i data-toggle="tooltip" class="entypo-cog pull-left config-wrap"></i>
-
-                            </a>
+                                <i data-toggle="tooltip" class="entypo-cog pull-left config-wrap"></i></a>
                         </li>
-
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Blog App">
                                 <i class="icon-document-edit"></i>
-                                <span>Blog App</span>
-
-                            </a>
+                                <span>Blog App</span></a>
                             <ul>
                                 <li>
                                     <a class="tooltip-tip2 ajax-load" href="#" title="Blog List"><i
@@ -431,35 +344,25 @@
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Social">
                                 <i class="icon-feed"></i>
-                                <span>Social</span>
-
-                            </a>
+                                <span>Social</span></a>
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Media">
                                 <i class="icon-camera"></i>
-                                <span>Media</span>
-
-                            </a>
+                                <span>Media</span> </a>
                         </li>
                     </ul>
-
+                    <!-- topnav -->
                     <ul class="topnav menu-left-nest">
                         <li>
                             <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
-
                                 <span class="design-kit"></span>
-                                <i data-toggle="tooltip" class="entypo-cog pull-left config-wrap"></i>
-
-                            </a>
+                                <i data-toggle="tooltip" class="entypo-cog pull-left config-wrap"></i></a>
                         </li>
-
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Dashboard">
                                 <i class="icon-window"></i>
-                                <span>Dashboard</span>
-
-                            </a>
+                                <span>Dashboard</span></a>
                         </li>
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Mail">
@@ -468,7 +371,6 @@
                                 <div class="noft-blue">289</div>
                             </a>
                         </li>
-
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Icons">
                                 <i class="icon-preview"></i>
@@ -476,7 +378,6 @@
                                 <div class="noft-blue" style="display: inline-block; float: none;">New</div>
                             </a>
                         </li>
-
                         <li>
                             <a class="tooltip-tip" href="#" title="Extra Pages">
                                 <i class="icon-document-new"></i>
@@ -517,27 +418,21 @@
                                 </li>
                             </ul>
                         </li>
-
                         <li>
                             <a class="tooltip-tip " href="#" title="login">
                                 <i class="icon-download"></i>
                                 <span>Login</span>
                             </a>
                         </li>
-
-                    </ul>
-
+                    </ul><!--./topnav-->
+                    <!-- menue-left-nest -->
                     <ul id="menu-showhide" class="topnav menu-left-nest">
                         <li>
                             <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
-
                                 <span class="component"></span>
                                 <i data-toggle="tooltip" class="entypo-cog pull-left config-wrap"></i>
-
                             </a>
                         </li>
-
-
                         <li>
                             <a class="tooltip-tip" href="#" title="UI Element">
                                 <i class="icon-monitor"></i>
@@ -623,17 +518,14 @@
                                 </li>
                             </ul>
                         </li>
-
                         <li>
                             <a class="tooltip-tip ajax-load" href="#" title="Map">
                                 <i class="icon-location"></i>
                                 <span>Map</span>
-
                             </a>
                         </li>
-                    </ul>
-
-
+                    </ul><!--./menue-left-nest-->
+                    <!-- side-dash -->
                     <div class="side-dash">
                         <h3>
                             <span>Device</span>
@@ -666,15 +558,13 @@
                                 <div class="linebar3">5,7,8,9,3,5,3,8,5</div>
                             </li>
                         </ul>
-                        <h3>
-                            <span>Visitors</span>
-                        </h3>
+                        <h3><span>Visitors</span></h3>
                         <div id="g1" style="height:180px" class="gauge"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div><!--side-dash-->
+                </div><!--./side-bar-->
+            </div><!--./tree-wrap-->
+        </div><!--./skin-part -->
+    </div><!--./Skin-select -->
     <!-- END OF SIDE MENU -->
 
 
@@ -683,101 +573,83 @@
     <div class="wrap-fluid">
         <div class="container-fluid paper-wrap bevel tlbr">
             <!-- CONTENT -->
-            <!--TITLE -->
             <div class="row">
                 <div id="paper-top">
                     <div class="col-sm-2">
                         <div class="devider-vertical visible-lg"></div>
                         <div class="btn-group btn-wigdet pull-right visible-lg">
-                            <div class="btn">
-                                Widget</div>
+                            <div class="btn">Widget</div>
                             <button data-toggle="dropdown" class="btn dropdown-toggle" type="button">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <ul role="menu" class=" dropdown-menu">
                                 <li> <a href="#">
-                                        <span class="entypo-plus-circled margin-iconic"></span>Add New
+                                    <span class="entypo-plus-circled margin-iconic"></span>اضافة جديد
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="entypo-heart margin-iconic"></span>Favorite</a>
+                                    <span class="entypo-heart margin-iconic"></span>المفضله</a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span class="entypo-cog margin-iconic"></span>Setting</a>
+                                    <span class="entypo-cog margin-iconic"></span>الاعدادات</a>
                                 </li>
                             </ul>
-                        </div>
-
-
-                    </div>
-
+                        </div><!--./btn-group-->
+                    </div><!--./col-sm-2-->
                     <div class="col-sm-7">
                         <div class="devider-vertical visible-lg"></div>
                         <div class="tittle-middle-header">
-
                             <div class="alert">
                                 <button type="button" class="close" data-dismiss="alert">×</button>
                                 <span class="tittle-alert entypo-info-circled"></span>
                                 <h6 style="margin-top:3px"> Welcome back,&nbsp;
-                                    <strong>Dave mattew!</strong>&nbsp;&nbsp;Your last sig in at Yesterday, 16:54 PM
+                                    <strong>Dave mattew!</strong>&nbsp;&nbsp;
+                                    Your last sig in at Yesterday, 16:54 PM
                                 </h6>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
+                            </div><!--./alert-->
+                        </div><!--./tittle-middle-header-->
+                    </div><!--./col-sm-7-->
                     <div class="col-sm-3">
                         <h2 class="tittle-content-header">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <span>Map</span>
                         </h2>
-
-                    </div>
-
-                </div>
-            </div>
+                    </div><!--./col-sm-3-->
+                </div><!--./paper-top-->
+            </div><!--./row-->
             <!--/ TITLE -->
-
             <!-- BREADCRUMB -->
             <ul id="breadcrumb">
                 <li class="pull-right">
                     <span class="entypo-home"></span>
                 </li>
-                <li class="pull-right"><i class="fa fa-lg fa-angle-left"></i>
+                <li class="pull-right">
+                    <i class="fa fa-lg fa-angle-left"></i>
                 </li>
-                <li class="pull-right"><a href="#" title="Sample page 1">Home</a>
+                <li class="pull-right">
+                    <a href="#" title="Sample page 1">Home</a>
                 </li>
-                <li class="pull-right"><i class="fa fa-lg fa-angle-left"></i>
+                <li class="pull-right">
+                    <i class="fa fa-lg fa-angle-left"></i>
                 </li>
-                <li class="pull-right"><a href="#" title="Sample page 1">Dashboard</a>
+                <li class="pull-right">
+                    <a href="#" title="Sample page 1">Map</a>
                 </li>
                 <li class="pull-left">
                     <div class="input-group input-widget">
                         <input style="border-radius:15px" type="text" placeholder="Search..." class="form-control">
-                    </div>
+                    </div><!--./input-group-->
                 </li>
-            </ul>
-
-            <!-- END OF BREADCRUMB -->
-
-
-
-
-
-
+            </ul><!--#/breadcrumb-->
+            <!-- paper-middle -->
             <div id="paper-middle">
-                <div id="mapContainer">
-                    <img src="assets/img/google@2x.png" alt="">
-                </div>
-            </div>
+                <div id="mapContainer"><!--Insert Map--></div>
+            </div><!--#/paper-middle-->
 
-            <!--  DEVICE MANAGER -->
+            <!-- content-wrap -->
             <div class="content-wrap">
                 <div class="row">
                     <div class="col-sm-3">
@@ -791,55 +663,49 @@
                                     <a href="#profitClose" class="gone">
                                         <span class="entypo-cancel"></span>
                                     </a>
-                                </div>
-                            </div>
-
+                                </div><!-- ./titleClose-->
+                            </div><!-- ./headline-->
                             <div class="value">
                                 <span class="pull-left"><i class="entypo-clock clock-position"></i>
                                 </span>
                                 <div id="getting-started">
                                     <span>%M</span>
-
                                     <span>%S</span>
-                                </div>
-
-
-                            </div>
-
+                                </div><!-- ./getting-started-->
+                            </div><!-- ./value-->
                             <div class="progress-tinny">
                                 <div style="width: 50%" class="bar"></div>
-                            </div>
+                            </div><!-- ./progress-tinny -->
                             <div class="profit-line">
-                                <i class="fa fa-caret-up fa-lg"></i>&#160;&#160; 50% &#160;From Last Hour</div>
-                        </div>
-                    </div>
+                                <i class="fa fa-caret-up fa-lg"></i>&#160;&#160; 50% &#160;From Last Hour
+                            </div><!-- ./profit-line-->
+                        </div><!-- ./profit-->
+                    </div><!-- ./col-sm-3 -->
                     <div class="col-sm-3">
                         <div class="revenue" id="revenueClose">
                             <div class="headline ">
-
                                 <h3>
                                     <span>
                                         <i class="maki-aboveground-rail"></i>&#160;&#160;Train </span>
                                 </h3>
-
                                 <div class="titleClose">
                                     <a href="#revenueClose" class="gone">
                                         <span class="entypo-cancel"></span>
                                     </a>
-                                </div>
-                            </div>
+                                </div><!-- ./titleClose -->
+                            </div><!-- ./headline-->
                             <div class="value">
                                 <span class="pull-left"><i class="entypo-gauge gauge-position"></i>
                                 </span>
                                 <canvas id="canvas4" width="70" height="70"></canvas>
                                 <i class="pull-right">/Km</i>
-                            </div>
+                            </div><!--value -->
                             <div class="progress-tinny">
                                 <div style="width: 25%" class="bar"></div>
-                            </div>
+                            </div><!-- ./progress-tinny-->
                             <div class="profit-line">
                                 <i class="fa fa-caret-down fa-lg"></i>&#160;&#160;Rate : 20 km/Hour</div>
-                        </div>
+                        </div><!-- ./profit-line-->
                     </div>
                     <div class="col-sm-3">
                         <div class="profit" id="profitClose">
@@ -852,62 +718,57 @@
                                     <a href="#profitClose" class="gone">
                                         <span class="entypo-cancel"></span>
                                     </a>
-                                </div>
-                            </div>
-
+                                </div><!-- ./titleClose-->
+                            </div><!-- ./headline-->
                             <div class="value">
                                 <span class="pull-left"><i class="entypo-clock clock-position"></i>
                                 </span>
                                 <div id="getting-started">
                                     <span>%S</span>
-                                </div>
-
-
-                            </div>
-
+                                </div><!-- ./getting-started-->
+                            </div><!-- ./value-->
                             <div class="progress-tinny">
                                 <div style="width: 50%" class="bar"></div>
-                            </div>
+                            </div><!-- ./progress-tinny-->
                             <div class="profit-line">
-                                <i class="fa fa-caret-up fa-lg"></i>&#160;&#160; 50% &#160;From Last Hour</div>
-                        </div>
-                    </div>
+                                <i class="fa fa-caret-up fa-lg"></i>&#160;&#160; 50% &#160;From Last Hour
+                            </div><!-- ./profit-line -->
+                        </div><!-- ./profit-->
+                    </div><!-- ./col-sm-3 -->
                     <div class="col-sm-3">
                         <div class="revenue" id="revenueClose">
                             <div class="headline ">
-
                                 <h3>
                                     <span>
                                         <i class="maki-aboveground-rail"></i>&#160;&#160;Train </span>
                                 </h3>
-
                                 <div class="titleClose">
                                     <a href="#revenueClose" class="gone">
                                         <span class="entypo-cancel"></span>
                                     </a>
-                                </div>
-                            </div>
+                                </div><!--./col-sm-3-->
+                            </div><!--./headline-->
                             <div class="value">
                                 <span class="pull-left"><i class="entypo-gauge gauge-position"></i>
                                 </span>
                                 <canvas id="canvas4" width="70" height="70"></canvas>
                                 <i class="pull-right">/Km</i>
-                            </div>
+                            </div><!--./value-->
                             <div class="progress-tinny">
                                 <div style="width: 25%" class="bar"></div>
-                            </div>
+                            </div><!--./progress-tinny-->
                             <div class="profit-line">
-                                <i class="fa fa-caret-down fa-lg"></i>&#160;&#160;Rate : 20 km/Hour</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                <i class="fa fa-caret-down fa-lg"></i>&#160;&#160;Rate : 20 km/Hour
+                            </div><!--./profit-line-->
+                        </div><!--./revenue-->
+                    </div><!--./col-sm-3-->
+                </div><!--./row-->
+            </div><!--./content-wrap-->
             <!--  / DEVICE MANAGER -->
 
             <!-- Desnstination -->
             <div class="content-wrap">
                 <div class="row">
-
                     <div class="col-sm-4">
                         <div id="RealTimeClose" class="nest">
                             <div class="title-alt">
@@ -1102,14 +963,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
-
-
-
+            <!-- content-wrap -->
             <div class="content-wrap">
                 <div class="row">
                     <div class="col-sm-6">
@@ -1264,39 +1120,29 @@
                                             </h3>
                                             <h4><i class="wi-day-storm-showers"></i>
                                             </h4>
-                                            <h5>11
-                                                <i>km/h</i>
-                                            </h5>
+                                            <h5>11<i>km/h</i></h5>
                                         </div>
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="daily-weather">
                                             <h2>Sat</h2>
-                                            <h3>82
-                                                <span><i class="wi-fahrenheit"></i>
-                                                </span>
+                                            <h3>82<span><i class="wi-fahrenheit"></i></span>
                                             </h3>
                                             <h4><i class="wi-cloudy"></i>
                                             </h4>
                                             <h5>10
                                                 <i>km/h</i>
                                             </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                        </div><!--./daily-weather-->
+                                    </div><!--./col-sm-2-->
+                                </div><!--./row-->
+                            </div><!--./weather-dash-->
+                        </div><!--./weather-wrap-->
+                    </div><!--./col-sm-6-->
+                </div><!--./row-->
                 <!-- /END OF CONTENT -->
 
-
-
-
-
-
-                <!-- FOOTER -->
-                <div class="footer-space"></div>
+                <!-- footer -->
                 <div id="footer">
                     <div class="devider-footer-left"></div>
                     <div class="time">
@@ -1304,22 +1150,35 @@
                         <p id="clock"></p>
                     </div>
                     <div class="copyright">Make with Love
-                        <span class="entypo-heart"></span>2014 <a href="http://gamatechno.com">Thesmile</a> All Rights
-                        Reserved</div>
+                        <span class="entypo-heart"></span>2014 All Rights Reserved</div>
                     <div class="devider-footer"></div>
-                </div>
-                <!-- / END OF FOOTER -->
-            </div>
-        </div>
-    </div>
-    <!--  END OF PAPER WRAP -->
-
-    <!-- Start Chat Talk -->
-  
+                </div><!--#/footer-->
+            </div><!--./content-wrap-->
+        </div><!--./container-fluid-->
+    </div><!--./wrap-fluid-->
     
-        
-
-
+    <!-- Chat Box-->
+    <div class="chatTalck">
+            <div class="headerr">
+                <div class="pull-right">
+                    <p><a href="#">Dave Junior </a></p>
+                </div>
+                <div class="pull-left option">
+                    <i class="fa fa-cog" aria-hidden="true" title="setting"></i>
+                    <i class="fa fa-times closee" aria-hidden="true" title="close"></i>
+                </div>
+            </div>
+            <div class="body">
+                <div class="pull-right mright">
+                    <span>Hi Im Ahmed Diab</span>
+                </div>
+                <div class="pull-left mleft">
+                    <span>Hello Ahmed</span>
+                </div>
+            </div>
+            <input type="text" placeholder="Type Message...">
+        </div> <!-- End Chat Box -->
+    
     <!-- END OF RIGHT SLIDER CONTENT-->
     <script src="./assets/js/jquery.min.js"></script>
 
@@ -1349,74 +1208,27 @@
     <script type="text/javascript" src="assets/js/speed/canvasgauge-coustom.js"></script>
     <script type="text/javascript" src="assets/js/countdown/jquery.countdown.js"></script>
 
-
-
-    <script>
-        var gauge4 = new Gauge("canvas4", {
-            'mode': 'needle',
-            'range': {
-                'min': 0,
-                'max': 90
-            }
-        });
-        gauge4.draw(Math.floor(Math.random() * 90));
-        var run = setInterval(function () {
-            gauge4.draw(Math.floor(Math.random() * 90));
-        }, 3500);
-    </script>
-
-    <script type="text/javascript">
-        var output, started, duration, desired;
-
-        // Constants
-        duration = 5000;
-        desired = '50';
-
-        // Initial setup
-        output = $('#speed');
-        started = new Date().getTime();
-
-        // Animate!
-        animationTimer = setInterval(function () {
-            // If the value is what we want, stop animating
-            // or if the duration has been exceeded, stop animating
-            if (output.text().trim() === desired || new Date().getTime() - started > duration) {
-                //console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 60)
-
-                );
-
-            } else {
-                console.log('animating');
-                // Generate a random string to use for the next animation step
-                output.text('' + Math.floor(Math.random() * 120)
-
-                );
-            }
-        }, 5000);
-    </script>
+    <!-- Getting Start -->
     <script type="text/javascript">
         $('#getting-started').countdown('2015/01/01', function (event) {
             $(this).html(event.strftime(
-
-                '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
+            '<span>%M</span>' + '<span class="start-min">:</span>' + '<span class="start-min">%S</span>'));
         });
-
-        $(".chat li").click(function () {
-            $(".chatTalck").fadeIn(2000);
-          })
-
-        $(".chatTalck .closee").click(function () {
-            $(".chatTalck").animate({opacity : 0} , 700)
-          })
-
-
+        // navbar-left
+        $(window).on("scroll", function () {
+            var sc = $(window).scrollTop();
+            if (sc >= 10) {
+                $('.nav2left').show();
+            }
+            else {
+                $('.nav2left').fadeOut();
+            }
+        })
+        //Chat
+        $(".chat li , .closee").click(function () {
+            $(".chatTalck").fadeToggle(700);
+        });
     </script>
-
-
-
-
 </body>
 
 </html>

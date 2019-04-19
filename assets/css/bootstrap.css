@@ -3097,7 +3097,7 @@ input[type="button"].btn-block {
   z-index: 990;
 }
 .pull-right > .dropdown-menu {
-  left: 0;
+  left: -24px;
   right: auto;
 }
 .dropup .caret,
@@ -3114,7 +3114,7 @@ input[type="button"].btn-block {
 }
 @media (min-width: 768px) {
   .navbar-right .dropdown-menu {
-    right: 0;
+    right: -15px;
     left:  auto;
   }
   .navbar-left .dropdown-menu-left {

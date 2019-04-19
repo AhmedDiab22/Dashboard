@@ -10,8 +10,8 @@
 }
 #skin-select {
     height: auto;
-    position: fixed;
-    top: 30px;
+    position: absolute;
+    top: 19px;
     width: 250px;
     z-index: 9999;
     right: 0 !important;

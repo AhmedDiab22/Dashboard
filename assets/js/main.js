@@ -236,10 +236,6 @@ head.js("assets/js/chart/jquery.sparkline.js", function() {
 head.js("assets/js/clock/jquery.clock.js", function() {
 
     //clock
-    $('#digital-clock').clock({
-        offset: '+5',
-        type: 'digital'
-    });
 
 
 });

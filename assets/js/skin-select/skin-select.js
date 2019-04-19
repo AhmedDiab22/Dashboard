@@ -6,10 +6,11 @@ $(document).ready(function() {
 
 		if($(this).hasClass('active')) {
 			$(this).removeClass('active')
-			$('#skin-select').animate({ left:0 }, 100);	
-			$('.wrap-fluid').css({"width":"auto","margin-left":"250px"});
-			$('.navbar').css({"margin-left":"240px"});
-
+			$('#skin-select').animate({ right:0 }, 100);	
+			$('.wrap-fluid').css({"width":"auto","margin-right":"250px"});
+			$('.navbar').css({"margin-right":"240px !important"});
+			$('.side-bar').css('width' , "auto");
+			$('.logoo').animate({right : '20px'});
 			$('#skin-select li').css({"text-align":"left"});
 			$('#skin-select li span, ul.topnav h4, .side-dash, .noft-blue, .noft-purple-number, .noft-blue-number, .title-menu-left').css({"display":"inline-block", "float":"none"});
 			//$('body').css({"padding-left":"250px"});
@@ -22,8 +23,6 @@ $(document).ready(function() {
 			$('.tooltip-tip2').addClass('tooltipster-disable');
 			$('.tooltip-tip').addClass('tooltipster-disable');
 
-			
-			$('.datepicker-wrap').css({"position":"absolute", "right":"300px"});
 			$('.skin-part').css({"visibility":"visible"});
 			$('#menu-showhide, .menu-left-nest').css({"margin":"10px"});
 			$('.dark').css({"visibility":"visible"});
@@ -39,11 +38,12 @@ $(document).ready(function() {
 			
 
 			//$('#skin-select').animate({ left:-200 }, 100);
-			$('#skin-select').animate({ left:-200 }, 100);
+			$('#skin-select').animate({ right:-200 }, 100);
 
-			$('.wrap-fluid').css({"width":"auto", "margin-left":"50px"});
+			$('.wrap-fluid').css({"width":"auto", "margin-right":"50px"});
 			$('.navbar').css({"margin-left":"50px"});
-
+			$('.side-bar').css('width' , "50px");
+			$('.logoo').animate({right : '55px'});
 			$('#skin-select li').css({"text-align":"right"});
 			$('#skin-select li span, ul.topnav h4, .side-dash, .noft-blue, .noft-purple-number, .noft-blue-number, .title-menu-left').css({"display":"none"});
 			//$('body').css({"padding-left":"50px"});
