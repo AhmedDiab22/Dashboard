@@ -21,13 +21,13 @@ body {
     overflow-x: hidden !important;
     min-height: 100%;
     z-index: -2;
-    position: relative;
     margin: 0px !important;
     background: url('../img/bg.jpg') no-repeat top center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    box-sizing: border-box !important;
 }
 
 /*
@@ -1795,6 +1795,12 @@ ul.topnav h4 {
     right: 6px;
 }
 
+.dev {
+    position: fixed !important;
+    left: 20px;
+    z-index: 999999999;
+}
+
 /**
  * TOP NAVBAR
  */
@@ -3496,7 +3502,8 @@ b#speed {
     width: 18%;
     background: rgba(0, 0, 0, 0.2);
     margin: 75px 0 0;
-    min-height: 551px;
+    overflow: auto;
+    height: 550px;
     padding: 20px 20px;
     border-radius: 4px;
 }
@@ -3672,137 +3679,146 @@ ul li {
     }
 }
 
-
-.chatTalck {
+.chatbox{
     position: fixed;
+    left: 20%;
+    height: 257px;
+    bottom: 70px;
+    width: 300px;
+    background : url('../img/bg.jpg');
     z-index: 1;
-    bottom: 0;
-    left: 25%;
-    width: 23%;
-    height: 55%;
-    background-color: #354d68;
     display: none;
 }
-
-.chatTalck .headerr {
-    position: absolute;
-    padding: 4px 16px;
-    background-color: #223d6a;
-    width: 100%;
+.chatHead{
+    background-color: #253657;
+    padding: 0 30px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 327px;
+    width: 300px;
+    z-index: 999999;
 }
-
-.chatTalck .headerr a {
-    color: #fff;
-    font-size: 15px;
-
-}
-
-.chatTalck .headerr a:first-of-type {
-    font-style: italic;
-}
-
-.chatTalck .headerr a:hover {
-    color: #dbdbdb;
-}
-
-.option i {
-    font-size: 17px;
-    color: #fff;
+.chatHead .user{
+    width: 50%;
+    float: right;
+    font-size: 20px;
     margin-top: 5px;
-    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
-
-.body {
-    position: absolute;
-    top: 80px;
+.chatHead .icon{
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin-top: 8px;
 }
-
-.body .mright {
-    position: absolute;
-    left: -190px;
+.chatHead .icon li{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 15px;
 }
-
-.body span {
-    background-color: #20262E;
-    padding: 5px;
-    border-radius: 5px;
+.chatbody{
+    padding: 0px 10px;
+    height: 300px;
+    overflow: auto;
+    font-size: 11px
 }
-
-.body .mright span:after {
-    content: "";
-    position: absolute;
-    left: 119px;
-    top: -1px;
-    border-width: 15px;
-    border-left: 8px solid #20262E;
-    border-right: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+.chatbody .row{
+    margin: 0;
+    padding: 0;
 }
-
-.body .mright:before {
-    content: "";
-    position: absolute;
-    top: -7px;
-    left: 140px;
-    background-image: url('../img/1.jpg');
-    background-size: cover;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+.right{
+    text-align: right;
+    margin-bottom: 20px;
 }
-
-.body .mleft {
-    margin-top: 50px;
-    position: absolute;
-    left: -235px;
-}
-
-.body .mleft:after {
-    content: "";
-    position: absolute;
-    top: -8px;
-    right: 110px;
-    background-image: url('../img/2.jpg');
-    background-size: cover;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-}
-
-.body .mleft span:after {
-    content: "";
-    position: absolute;
-    left: -17px;
-    top: -1px;
-    border-width: 15px;
-    border-left: 10px solid transparent;
-    border-right: 8px solid #20262E;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-
-.chatTalck input {
-    position: absolute;
+.chatbody .right .text{
     width: 100%;
-    bottom: 0;
-    padding: 10px;
-    color: #20262E;
+    float: left;
 }
+.chatbody .left .img{
+    width: 16%;
+    float: left;
+}
+.chatbody .left .text{
+    width: 84%;
+    float: right;
+}
+
+.chatbody .left img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 1px;
+    border: 1px solid #062358;
+}
+.chatbody span{
+    background-color: #42a3ff;
+    color: #fff;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.chatbody .right span{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.chatbody .right img{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.textarea{
+    width: 100%    
+}
+.textarea textarea{
+    position: fixed;
+    bottom: 25px;
+    height: 45px;
+    width: 22%;
+    left: 273px;
+    resize: none;
+    border: none;
+    outline: 0;
+    overflow: visible;
+    padding: 10px;
+    color: rgb(48, 47, 47);
+    font-size: 15px;
+    border-top: 1px solid rgb(134, 133, 133);
+}
+
+
+.iconss{
+    position: fixed;
+    bottom: 5px;
+    font-size: 16px;
+}
+.iconss ul{
+    margin: 0;
+    padding: 0;
+}
+.iconss li{
+    display: inline-block;
+    padding-left: 15px;
+}
+.iconss a{
+    color: rgb(134, 133, 133)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .togglee .entypo-menu {
     padding: 6px 10px;
 }
 
-/* 
-.nav2left{
-    position: fixed;
-    left: 20px;
-    background-color: transparent;
-} */
-
-.dev {
-    position: fixed !important;
-    left: 20px;
-    z-index: 999999999;
-}

@@ -207,7 +207,7 @@
     </nav> <!--./Top navbar-->
 
     <!-- SIDE MENU -->
-    <div style="margin-top:0;" class="right-wrapper">
+    <div style="margin-top:0;" class="right-wrapper aa">
         <div class="row">
             <h3>
                 <span><i class="entypo-chat"></i>&nbsp;&nbsp;الدردشه</span>
@@ -224,24 +224,25 @@
                             <br><i>اخر ظهور : 10:0 ص</i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span>
-                                <img alt="" class="img-chat img-circle"
-                                    src="http://api.randomuser.me/portraits/thumb/men/21.jpg">
-                            </span><b>Kenneth Lucas</b>
-                            <br><i>اخر ظهور : 09:00 م</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>
-                                <img alt="" class="img-chat img-circle"
-                                    src="http://api.randomuser.me/portraits/thumb/men/22.jpg">
-                            </span><b>Heidi Perez</b>
-                            <br><i>اخر ظهور : 12:00 ص</i>
-                        </a>
-                    </li>
+                    
+                        <li>
+                                <a href="#">
+                                    <span>
+                                        <img alt="" class="img-chat img-circle"
+                                            src="http://api.randomuser.me/portraits/thumb/men/22.jpg">
+                                    </span><b>Heidi Perez</b>
+                                    <br><i>اخر ظهور : 12:00 ص</i>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="#">
+                                        <span>
+                                            <img alt="" class="img-chat img-circle"
+                                                src="http://api.randomuser.me/portraits/thumb/men/22.jpg">
+                                        </span><b>Heidi Perez</b>
+                                        <br><i>اخر ظهور : 12:00 ص</i>
+                                    </a>
+                                </li>
                 </ul><!--./chat-->
                 <span class="label label-chat">غير نشط</span>
                 <ul class="chat">
@@ -1158,30 +1159,79 @@
     </div><!--./wrap-fluid-->
     
     <!-- Chat Box-->
-    <div class="chatTalck">
-            <div class="headerr">
-                <div class="pull-right">
-                    <p><a href="#">Dave Junior </a></p>
-                </div>
-                <div class="pull-left option">
-                    <i class="fa fa-cog" aria-hidden="true" title="setting"></i>
-                    <i class="fa fa-times closee" aria-hidden="true" title="close"></i>
+    <div class="chatbox">
+            <div class="chatHead">
+                <div class="row">
+                       <p class="user"><a href="#">user</a></p>
+                       <ul class="list-unstyled icon">
+                        <li class="list-item">
+                            <a href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="#"><i class="fa fa-times closee" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="body">
-                <div class="pull-right mright">
-                    <span>Hi Im Ahmed Diab</span>
+            <div class="chatbody">
+                <div class="row">
+                    <div class="col-12 right text-right">
+                        <div class="text">
+                        <span class="msg">السلام عليكم ورحمة الله وبركاته</span>
+                        </div>
+                    </div>
+                     <div class="col-12 left text-left">
+                        <div class="img">
+                        <img src="./assets/img/testimonials-2.jpg" alt="">
+                        </div>
+                        <div class="text">
+                        <span class="msg">السلام عليكم </span>
+                        </div>
+                    </div>
+                    <div class="col-12 right text-right">
+                            <div class="text">
+                            <span class="msg">السلام عليكم ورحمة الله وبركاته</span>
+                            </div>
+                        </div>
+                     
                 </div>
-                <div class="pull-left mleft">
-                    <span>Hello Ahmed</span>
+                <div class="textarea">
+                        <textarea placeholder="كتابة رساله ....."></textarea>
+                    </div>
+                    <div class="iconss">
+                            <ul class="list-unstyled icon">
+                                    <li class="list-item">
+                                        <a href="#"><i class="fa fa-file" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a href="#"><i class="fa fa-paperclip" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a href="#"><i class="fa fa-file" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a href="#"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+
+                               
+                        </div>
                 </div>
             </div>
-            <input type="text" placeholder="Type Message...">
-        </div> <!-- End Chat Box -->
+
+            
+
+    <!-- End Chat Box -->
     
     <!-- END OF RIGHT SLIDER CONTENT-->
     <script src="./assets/js/jquery.min.js"></script>
-
+    
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
     <script src="assets/js/progress-bar/src/jquery.velocity.min.js"></script>
     <script src="assets/js/progress-bar/number-pb.js"></script>
@@ -1201,12 +1251,13 @@
 
     <!-- GAGE -->
 
-
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="assets/js/chart/jquery.flot.js"></script>
     <script type="text/javascript" src="assets/js/chart/jquery.flot.resize.js"></script>
     <script type="text/javascript" src="assets/js/chart/realTime.js"></script>
     <script type="text/javascript" src="assets/js/speed/canvasgauge-coustom.js"></script>
     <script type="text/javascript" src="assets/js/countdown/jquery.countdown.js"></script>
+
 
     <!-- Getting Start -->
     <script type="text/javascript">
@@ -1226,8 +1277,20 @@
         })
         //Chat
         $(".chat li , .closee").click(function () {
-            $(".chatTalck").fadeToggle(700);
+            $(".chatbox").fadeToggle(700);
         });
+
+        
+
+
+
+       
+        $('html').niceScroll({
+     cursorcolor : '#243c65' ,
+     cursorwidth : '10px',
+     cursorborder : '1px solid #26416e'  
+        });
+
     </script>
 </body>
 

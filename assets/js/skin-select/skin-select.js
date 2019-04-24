@@ -1,6 +1,5 @@
 $(document).ready(function() { 
 	
-	
 	// toggle skin select	
 	$("#skin-select #toggle").click(function() { 
 
@@ -66,6 +65,8 @@ $(document).ready(function() {
 		}
 		return false;
 	});
+
+	
 	
 	
 	// show skin select for a second

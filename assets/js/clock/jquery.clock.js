@@ -4,9 +4,9 @@ function showTime() {
 
     var theDate = new Date();
 
-    Hours =theDate.getHours();
+    Seconds =theDate.getHours();
     Minutes =theDate.getMinutes();
-    Seconds =theDate.getSeconds();
+    Hours =theDate.getSeconds();
 
     if(Hours < 10){
       Hours = '0' + Hours
@@ -24,7 +24,7 @@ function showTime() {
       Seconds = ' AM '  +  Seconds 
     }
 
-      document.getElementById('clock').innerHTML = Hours + ' : ' + Minutes + ' : ' + Seconds;
+      document.getElementById('clock').innerHTML = Seconds + ' : ' + Minutes + ' : ' + Hours;
 
   }
 
