@@ -18,13 +18,13 @@ function showTime() {
       Seconds = '0' + Seconds
     }
 
-    if(Hours > 12){
-      Seconds = 'PM ' +  Seconds 
+    if(Seconds > 12){
+      Hours = 'م ' +  Hours 
     }else{
-      Seconds = ' AM '  +  Seconds 
+      Hours = 'ص '  +  Hours 
     }
 
-      document.getElementById('clock').innerHTML = Seconds + ' : ' + Minutes + ' : ' + Hours;
+      document.getElementById('clock').innerHTML = Hours + ' : ' + Minutes + ' : ' + Seconds;
 
   }
 

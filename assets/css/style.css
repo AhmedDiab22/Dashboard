@@ -3527,6 +3527,10 @@ b#speed {
     margin: 0 20px 0 0;
     font-weight: normal;
 }
+.right-wrapper li{
+    color: #fff;
+    cursor: pointer;
+}
 
 .chat {
     margin: 10px 0 0 -19px;
@@ -3678,25 +3682,30 @@ ul li {
         width: 19% !important
     }
 }
-
 .chatbox{
     position: fixed;
     left: 20%;
-    height: 257px;
+    height: 320px;
     bottom: 70px;
     width: 300px;
-    background : url('../img/bg.jpg');
+    background: #354d68;
     z-index: 1;
     display: none;
 }
 .chatHead{
-    background-color: #253657;
+    background-color: #223d6a;
+    color: #fff;
     padding: 0 30px;
     overflow: hidden;
     position: fixed;
-    bottom: 327px;
+    bottom: 370px;
     width: 300px;
     z-index: 999999;
+}
+
+.chatHead i{
+    color: #fff;
+    cursor: pointer;
 }
 .chatHead .user{
     width: 50%;
@@ -3720,56 +3729,63 @@ ul li {
     padding: 0px 10px;
     height: 300px;
     overflow: auto;
-    font-size: 11px
+    font-size: 11px;
+    margin-top: 20px;
 }
 .chatbody .row{
     margin: 0;
     padding: 0;
 }
-.right{
-    text-align: right;
-    margin-bottom: 20px;
-}
-.chatbody .right .text{
-    width: 100%;
-    float: left;
-}
-.chatbody .left .img{
+.chatbody .img{
     width: 16%;
     float: left;
+    margin-top: -8px;
 }
-.chatbody .left .text{
-    width: 84%;
-    float: right;
-}
-
-.chatbody .left img{
+.chatbody img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     padding: 1px;
     border: 1px solid #062358;
 }
-.chatbody span{
-    background-color: #42a3ff;
+.rightt{
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.rightt p{
+    margin-bottom: 3px;
+    
+}
+.chatbody p span{
+    padding: 8px;
+    border-radius: 8px;
     color: #fff;
+    display: block;
+    background-color: #5e6167;
     display: inline-block;
-    border-radius: 10px;
-    padding: 5px;
-    font-size: 14px;
-    margin-top: 5px;
+    border : 1px solid rgb(128, 126, 126)
 }
-.chatbody .right span{
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-.chatbody .right img{
+.leftt{
+    width: 150px;
+    float: left;
+    margin-left: 15px;
     margin-bottom: 20px;
+}
+.leftt p{
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.leftt p span{
+    background-color: #41454b
+}
+.leftt p:first-of-type{
+    margin-left: 30px;
     margin-top: 20px;
 }
-
-.textarea{
-    width: 100%    
+.leftt p:not(:first-of-type){
+    margin-left: 30px;
+    margin-top: -7px;
 }
 .textarea textarea{
     position: fixed;
@@ -3804,19 +3820,6 @@ ul li {
 .iconss a{
     color: rgb(134, 133, 133)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .togglee .entypo-menu {
     padding: 6px 10px;
