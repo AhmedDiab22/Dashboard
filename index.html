@@ -1222,7 +1222,7 @@
     <div class="chatbox">
         <div class="chatHead">
             <div class="row">
-                <p class="user"><a href="#">user</a></p>
+                <p class="user"><a href="#">Mohamed Youuseff</a></p>
                 <ul class="list-unstyled icon">
                     <li class="list-item">
                         <i class="fa fa-video-camera" aria-hidden="true"></i>
@@ -1241,6 +1241,8 @@
                 <div class="rightt">
                     <div class="col-12 right text-right">
                         <div class="text">
+                            <p class="msg"> <span>Ahmed Hamed Diab</span> </p>
+                            <p class="msg"> <span>Ahmed Hamed Diab</span> </p>
                             <p class="msg"> <span>Ahmed Hamed Diab</span> </p>
                         </div>
                     </div>
@@ -1355,8 +1357,11 @@
             }
         })
         //Chat
-        $(".chat li , .closee").click(function () {
-            $(".chatbox").fadeToggle(700);
+        $(".closee").click(function () {
+            $(".chatbox").fadeOut(100);
+        });
+        $('.aa ul li').click(function () {
+            $(".chatbox").fadeIn(100);
         });
 
         
