@@ -3654,25 +3654,18 @@ nav {
     margin-left: 0 !important;
     margin-right: 240px !important;
 }
-
-
-
 .wrap-fluid {
     margin-left: 250px;
 }
-
 ul li {
     text-align: right !important;
 }
-
 .favv {
     min-width: 50px !important
 }
-
 .edit {
     min-width: 190px !important
 }
-
 @media (max-width: 767px) {
     .wrap-fluid {
         margin-left: -49px !important;
@@ -3701,8 +3694,8 @@ ul li {
     bottom: 340px;
     width: 300px;
     z-index: 999999;
+    cursor: pointer;
 }
-
 .chatHead i{
     color: #fff;
     cursor: pointer;
@@ -3758,14 +3751,13 @@ ul li {
     padding: 1px;
     border: 1px solid #062358;
 }
-.rightt{
-    width: 150px;
-    margin-top: 20px;
+/* ****************** */
+.right{
     margin-bottom: 10px;
 }
-.rightt p{
+.right p{
+    width: 170px;
     margin-bottom: 3px;
-    
 }
 .chatbody p span{
     padding: 8px;
@@ -3776,27 +3768,32 @@ ul li {
     display: inline-block;
     border : 1px solid rgb(128, 126, 126)
 }
-.leftt{
+.left{
     width: 150px;
     float: left;
-    margin-left: 15px;
-    margin-bottom: 20px;
 }
-.leftt p{
+.left p{
     margin-left: 5px;
-    margin-bottom: 10px;
+    width: 170px;
+    float: left;
 }
-.leftt p span{
+.left p span{
     background-color: #41454b
 }
-.leftt p:first-of-type{
-    margin-left: 30px;
-    margin-top: 20px;
+.left p:first-of-type{
+    margin-left: 3px;
 }
-.leftt p:not(:first-of-type){
-    margin-left: 30px;
+.left p:not(:first-of-type){
+    margin-left: 45px;
     margin-top: -7px;
 }
+.chatbody .right:first-of-type{
+    margin-top: 15px;
+}
+.chatbody .left:first-of-type{
+    margin-top: 15px;
+}
+/* ******************* */
 .textarea textarea{
     position: fixed;
     bottom: 25px;
@@ -3812,8 +3809,6 @@ ul li {
     font-size: 15px;
     border-top: 1px solid rgb(134, 133, 133);
 }
-
-
 .iconss{
     position: fixed;
     width: 301px;
@@ -3835,7 +3830,6 @@ ul li {
 .iconss a{
     color: rgb(134, 133, 133)
 }
-
 .togglee .entypo-menu {
     padding: 6px 10px;
 }

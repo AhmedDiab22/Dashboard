@@ -1231,55 +1231,35 @@
                         <i class="fa fa-phone" aria-hidden="true"></i>
                     </li>
                     <li class="nav-item">
-                        <i class="fa fa-times closee" aria-hidden="true"></i>
+                        <i class="fa fa-times closee a" aria-hidden="true"></i>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="chatbody">
             <div class="row">
-                <div class="rightt">
-                    <div class="col-12 right text-right">
-                        <div class="text">
-                            <p class="msg"> <span>Ahmed Hamed Diab</span> </p>
-                            <p class="msg"> <span>Ahmed Hamed Diab</span> </p>
-                            <p class="msg"> <span>Ahmed Hamed Diab</span> </p>
-                        </div>
-                    </div>
-                </div>
-               <div  class="leftt">
-                <div class="col-12 left text-left">
+
+                 <!-- .left -->
+                <div class="col-12 left text-left" style="width:100%;">
                     <div class="img">
                         <img src="./assets/img/testimonials-2.jpg" alt="">
                     </div>
                     <div class="text">
-                        <p class="msg"> <span>..Ahmed</span> </p>
-                        <p class="msg"> <span>Hello It's Me Can I Say Smoting</span> </p>
-                        
+                        <p class="msg"> <span>Ahmed...</span> </p>
+                        <p class="msg"> <span>I Say Smoting</span> </p>
+                        <p class="msg"> <span>Hello Can I Say Smoting</span> </p>
+                        <p class="msg"> <span>Hello Can I Say Smoting say</span> </p>
                     </div>
-                    
-                </div>
-               </div>
-               <div class="rightt">
-                <div class="col-12 right text-right">
-                    <div class="text">
-                        <p class="msg"> <span>Hello It's Me Can I Say Smoting</span> </p>
-                    </div>
-                </div>
+                </div><!-- left -->
+                <!-- .right -->
+                <div class="col-12 right text-right" style="width:100%;">
+                        <p class="msg"> <span>Hello Can I Say Smoting say</span> </p>
+                        <p class="msg"> <span>Hello Can I Say Smoting</span> </p>
+                        <p class="msg"> <span>I Say Smoting</span> </p>
+                        <p class="msg"> <span>Ahmed...</span> </p>    
+                </div> <!-- ./right -->
             </div>
-            <div  class="leftt">
-                <div class="col-12 left text-left">
-                    <div class="img">
-                        <img src="./assets/img/testimonials-2.jpg" alt="">
-                    </div>
-                    <div class="text">
-                        <p class="msg"> <span>..Ahmed</span> </p>
-                        
-                    </div>
-                    
-                </div>
-               </div>
-            <div class="textarea">
+                <div class="textarea">
                 <textarea placeholder="كتابة رساله ....."></textarea>
             </div>
             <div class="iconss">
@@ -1289,9 +1269,6 @@
                     </li>
                     <li class="nav-item">
                         <a href="#"><i class="fa fa-paperclip" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><i class="fa fa-file" aria-hidden="true"></i></a>
                     </li>
                     <li class="nav-item">
                         <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
@@ -1305,6 +1282,8 @@
             </div>
         </div>
     </div>
+
+    
 
 
 
@@ -1363,6 +1342,12 @@
         $('.aa ul li').click(function () {
             $(".chatbox").fadeIn(100);
         });
+        $(".chatHead").click(function () {
+            $(".chatbox").hide();
+        });
+
+
+
 
         
 
