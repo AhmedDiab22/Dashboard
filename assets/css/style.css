@@ -233,7 +233,7 @@ a:hover {
     color: #FFFFFF;
     font-size: 11px;
     font-weight: normal;
-    margin-top: 0;
+    margin-top: 10px;
     padding: 2px 4px;
     position: absolute;
     left: 10px;
@@ -887,7 +887,7 @@ img.ikon {
     height: 25px;
     right: -17px;
     position: relative;
-    top: 0;
+    top: 7px;
     width: 25px;
 }
 
